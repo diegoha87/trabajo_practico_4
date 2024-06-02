@@ -2,27 +2,17 @@ package ar.edu.unju.fi.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
+@RequestMapping("/principal")
 public class MainControllers {
 	
-	@GetMapping("/contenedores")
-	public String getContainersPage() {
-		return "containers";
+	@GetMapping({"/index", "/home"})
+	public String getIndex() {
+		return "index";
 	}
 	
-	@GetMapping("filascolumnas")
-	public String getFilasColumnasPage() {
-		return "filas-columnas";
-	}
-	
-	@GetMapping("/alineacion")
-	public String getAlineacionPage() {
-		return "alineacion";
-	}
-	
-	
-
 }
