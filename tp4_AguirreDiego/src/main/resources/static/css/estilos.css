@@ -1,0 +1,38 @@
+@charset "UTF-8";
+.logo img{
+	width: 50%;
+}
+
+h1, h2, p{
+	text-align: center;
+
+}
+
+
+body{
+	background: #e6eee3;
+}
+
+.menu{
+	margin: auto;
+	width: 400px;
+	height:400px;
+	margin-top: 20px;
+	background-image: url(https://noticias.unju.edu.ar/noticias/serv/notis/174709497ce3dfa0d277f690f59d4d40d9b7.jpg);
+}
+
+.aside{
+	margin: auto;
+	width: 900px;
+	height:400px;
+	margin-top: 20px;
+	background-color: #949494;
+	justify-content: center;
+}
+
+.footer{
+	margin: auto;
+	width: 900px;
+	height:25px;
+	background-color: #797979;
+}

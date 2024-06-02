@@ -1,16 +1,137 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Inicio</title>
-		<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
-		<link th:rel="stylesheet" th:href="@{/css/estilos.css}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link th:rel="stylesheet" data-th-href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+		<link th:rel="stylesheet" data-th-href="@{/css/estilos.css}">
+		<link rel="stylesheet" href="/css/estilos.css">
 	</head>
-	
 	<body>
+			<header>
+				<div class="row">
+					<div class="col-2 bg-light  text-center logo">
+						<img alt="logo de la facultad" src="/img/fi-logo2.jpeg" class="img-fluid"><br>
+						<p>Educación que mueve al mundo, ingenieros que lo diseñan.</p>
+					</div>
+				
+					<div class="col-10 bg-secondary">
+						<h1 class="container">Facultad de Ingenieria - Unju</h1>
+						<nav class="navbar navbar-expand-lg bg-secondary ">
+						  <div class="container-fluid">
+						    <a class="navbar-brand" href="#">Inicio</a>
+						    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						      <span class="navbar-toggler-icon"></span>
+						    </button>
+						    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+						      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						        <li class="nav-item">
+						          <a class="nav-link active" aria-current="page" href="#">Acerca de</a>
+						        </li>
+						        <li class="nav-item">
+						          <a class="nav-link active" aria-current="page" href="#">Carreras</a>
+						        </li>
+						        <li class="nav-item">
+						          <a class="nav-link active" aria-current="page" href="#">Noticias</a>
+						        </li>
+						        <li class="nav-item">
+						          <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+						        </li>
+						      </ul>
+						      <form class="d-flex" role="search">
+						        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="search">
+						        <button class="btn btn-outline-success text-bg-dark" type="submit">Buscar</button>
+						      </form>
+						    </div>
+						  </div>
+						</nav>
+					</div>
+				</div>
+			</header>
+			
+				<div class= "menu border border-dark-subtle">
+					<main>
+						<h2 >Facultad de Ingeniería de la Universidad Nacional de Jujuy</h2>
+						<p>
+							Bodas de oro de la Facultad de Ingeniería 1972 - 2022: 
+							50 años contribuyendo al crecimiento de Jujuy
+							Fundada el 24 de mayo 1972, el pasado martes 24 de mayo de 2022
+							la Facultad de Ingeniería de la Universidad Nacional de Jujuy celebró 
+							su 50° Aniversario rindiendo homenaje a sus fundadores y destacando las acciones 
+							de contribución en la formación de profesionales y al crecimiento 
+							de la provincia de Jujuy a lo largo de estos años.
+						</p>
+					</main>
+				</div>
+			
+					<div id="carouselExample" class="carousel slide">
+						<h1>Noticias Recientes</h1>
+					  <div class="carousel-inner">
+					    <div class="carousel-item active img-fluid">
+					      <img src="https://fi.unju.edu.ar/cache/lofthumbs/750x330-cafi-2021.jpg" class="d-block w-100" alt="banner 1">
+					    </div>
+					    <div class="carousel-item img-fluid">
+					      <img src="https://fi.unju.edu.ar/cache/lofthumbs/750x330-cafi-2021.jpg" class="d-block w-100" alt="banner 2">
+					    </div>
+					    <div class="carousel-item img-fluid">
+					      <img src="https://fi.unju.edu.ar/cache/lofthumbs/750x330-cafi-2021.jpg" class="d-block w-100" alt="banner 3">
+					    </div>
+					  </div>
+					  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+					    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					    <span class="visually-hidden">Previous</span>
+					  </button>
+					  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+					    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					    <span class="visually-hidden">Next</span>
+					  </button>
+					</div>
+				
 		
-	
-		<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+				<aside>
+					<div class="aside"  >
+					<div class="row">
+						<div class="col-sm-4 col-md-4 mgbot-20">
+						<h3>FACULTAD DE INGENIERÍA - UNJu</h3>
+						<p><i class="fa fa-map"> </i>Ítalo Palanca Nº 10</p>
+						<p><i class="fa fa-globe"> </i>San Salvador de Jujuy<br />Jujuy - Argentina</p>
+						<p><i class="fa fa-envelope"> </i><a href="mailto:info@fi.unju.edu.ar">info@fi.unju.edu.ar</a></p>
+						<h3>Aviso Legal</h3>
+						<hr />
+						<ul>
+						<li><a href="#">Términos y Condiciones</a></li>
+						<li><a href="#">Condiciones de uso del Correo Electrónico</a></li>
+						</ul>
+						</div>
+						<div class="col-sm-4 col-md-4 mgbot-20">
+						<h3>Redes Sociales</h3>
+						<hr />
+						<ul>
+						<li><a href="https://www.facebook.com/fiunju/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+						<li><a href="https://www.youtube.com/channel/UCgS9XJlKKSYI1oJ4lIOo77A" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+						<li><a href="https://www.linkedin.com/school/facultad-de-ingenieria-unju" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+						<li><a href="https://www.instagram.com/fiunju/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+						</ul>
+						</div>
+						<div class="col-sm-4 col-md-4 mgbot-20">
+						<h3 >Enlaces de Interés</h3>
+						<hr />
+						<ul style="list-style: none;">
+						<li><a href="#" >Calendario Academico></li>
+						<li><a href="#" >Sistema de Bibliotecas de la UNJu</a></li>
+						<li><a href="#" >Biblioteca Electrónica C y T</a></li>
+						</div>
+					</div>
+					</div>
+					<footer class="footer">
+						<p>Copyright © 2014-2024 - Facultad de Ingeniería - UNJu</p>
+					</footer>
+				</aside>
+			
+		</div>
+		
+		<script type="text/javascript" data-th-src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
 	</body>
 </html>
