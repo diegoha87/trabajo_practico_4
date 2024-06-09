@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html xmlns:th="http://www.thymeleaf.org"  lang="es">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,46 +10,7 @@
 		<link rel="stylesheet" href="/css/estilos.css">
 	</head>
 	<body>
-			<header>
-				<div class="row">
-					<div class="col-2 bg-light  text-center logo">
-						<img alt="logo de la facultad" src="/img/fi-logo2.jpeg" class="img-fluid"><br>
-						<p>Educación que mueve al mundo, ingenieros que lo diseñan.</p>
-					</div>
-				
-					<div class="col-10 bg-secondary">
-						<h1 class="container">Facultad de Ingenieria - Unju</h1>
-						<nav class="navbar navbar-expand-lg bg-secondary ">
-						  <div class="container-fluid">
-						    <a class="navbar-brand" href="#">Inicio</a>
-						    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						      <span class="navbar-toggler-icon"></span>
-						    </button>
-						    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-						      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						        <li class="nav-item">
-						          <a class="nav-link active" aria-current="page" href="#">Acerca de</a>
-						        </li>
-						        <li class="nav-item">
-						          <a class="nav-link active" aria-current="page" href="#">Carreras</a>
-						        </li>
-						        <li class="nav-item">
-						          <a class="nav-link active" aria-current="page" href="#">Noticias</a>
-						        </li>
-						        <li class="nav-item">
-						          <a class="nav-link active" aria-current="page" href="#">Contacto</a>
-						        </li>
-						      </ul>
-						      <form class="d-flex" role="search">
-						        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="search">
-						        <button class="btn btn-outline-success text-bg-dark" type="submit">Buscar</button>
-						      </form>
-						    </div>
-						  </div>
-						</nav>
-					</div>
-				</div>
-			</header>
+			<header data-th-replace="~{/layouts/header :: header}"></header>
 			
 				<div class= "menu border border-dark-subtle">
 					<main>
@@ -125,9 +86,7 @@
 						</div>
 					</div>
 					</div>
-					<footer class="footer">
-						<p>Copyright © 2014-2024 - Facultad de Ingeniería - UNJu</p>
-					</footer>
+					<footer data-th-replace="~{/layouts/footer :: footer}"></footer>
 				</aside>
 			
 		</div>
