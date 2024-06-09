@@ -9,6 +9,7 @@ import java.util.function.Predicate;
 import org.springframework.stereotype.Component;
 
 import ar.edu.unju.fi.model.Carrera;
+import ar.edu.unju.fi.model.Docente;
 @Component
 public class CollectionCarrera {
 	private static List<Carrera> carreras  = new ArrayList<Carrera>();
@@ -18,9 +19,9 @@ public class CollectionCarrera {
 	 */
 	 public static List<Carrera> getCarreras(){
 		 if(carreras.isEmpty()) {
-			 carreras.add(new Carrera(1,"A.P.U",(byte)3,true));
-			 carreras.add(new Carrera(2,"Ingeniería Informática",(byte)5,true));
-			 carreras.add(new Carrera(3,"Ingeniería Química",(byte)5,false));
+			 carreras.add(new Carrera("1","A.P.U",(byte)3,true));
+			 carreras.add(new Carrera("2","Ingeniería Informática",(byte)5,true));
+			 carreras.add(new Carrera("3","Ingeniería Química",(byte)5,false));
 		 }
 		 return carreras;
 	 }
@@ -37,10 +38,10 @@ public class CollectionCarrera {
 	  * elimina un objeto carrera del arrayList de carreras
 	  * @param codigoCarrera
 	  */
-	 public static void eliminarCarrera(int codigoCarrera) {
+	 public static void eliminarCarrera(String codigoCarrera) {
 		 Iterator<Carrera> iterator = carreras.iterator();
 		 while(iterator.hasNext()) {
-			 if(iterator.next().getCodigo()==codigoCarrera) {
+			 if(iterator.next().getCodigo().equals(codigoCarrera)) {
 				 iterator.remove();
 			 }
 		 }
@@ -52,7 +53,7 @@ public class CollectionCarrera {
 	  */
 	 public static void modificarCarrera(Carrera carrera) {
 		 for(Carrera carre : carreras) {
-			 if(carre.getCodigo() == carrera.getCodigo()) {
+			 if(carre.getCodigo().equals(carrera.getCodigo()) ) {
 				 carre.setNombre(carrera.getNombre());
 				 carre.setCantidadAnios(carrera.getCantidadAnios());
 				 carre.setEstado(carrera.isEstado());
@@ -67,13 +68,14 @@ public class CollectionCarrera {
 	  * @param codigo el codigo a bscar en el arrayList carreras
 	  * @return
 	  */
-	 public static Carrera buscarCarrera(int codigo) {
-		 Predicate<Carrera> filterCodigo = c -> c.getCodigo() == codigo;
-		 Optional<Carrera> carrera = carreras.stream().filter(filterCodigo).findFirst();
-		 if(carrera.isPresent()) {
-			 return carrera.get();
-		 }else {
-			 return null;
+	 public static Carrera buscarCarrera(String codigo) {
+		 Carrera carrera = new Carrera();
+		 for(Carrera c: carreras) {
+			 if(c.getCodigo().equals(codigo)) {
+				 carrera = c;
+				 break;
+			 }
 		 }
+		 return carrera;
 	 }
 }

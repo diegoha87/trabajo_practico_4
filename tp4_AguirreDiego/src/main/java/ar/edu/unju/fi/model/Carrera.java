@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Carrera {
-	private int codigo;
+	private String codigo;
 	private String nombre;
 	private byte cantidadAnios;
 	private boolean estado;
@@ -13,7 +13,7 @@ public class Carrera {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Carrera(int codigo, String nombre, byte cantidadAnios, boolean estado) {
+	public Carrera(String codigo, String nombre, byte cantidadAnios, boolean estado) {
 
 		this.codigo = codigo;
 		this.nombre = nombre;
@@ -21,11 +21,11 @@ public class Carrera {
 		this.estado = estado;
 	}
 
-	public int getCodigo() {
+	public String getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(int codigo) {
+	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
 

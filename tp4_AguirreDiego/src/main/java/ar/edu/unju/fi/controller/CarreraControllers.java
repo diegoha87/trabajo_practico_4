@@ -50,7 +50,7 @@ public class CarreraControllers {
 	}
 	
 	@GetMapping("/modificar/{codigo}")
-	public String getModificarCarreraPage(Model model, @PathVariable(value="codigo") int codigo) {
+	public String getModificarCarreraPage(Model model, @PathVariable(value="codigo") String codigo) {
 		Carrera carreraEncontrada = new Carrera();
 		boolean edicion = true;
 		carreraEncontrada = CollectionCarrera.buscarCarrera(codigo);
@@ -67,7 +67,7 @@ public class CarreraControllers {
 	}
 	
 	@GetMapping("/eliminar/{codigo}")
-	public String eliminarCarrera(@PathVariable(value="codigo") int codigo) {
+	public String eliminarCarrera(@PathVariable(value="codigo") String codigo) {
 		CollectionCarrera.eliminarCarrera(codigo);
 		return "redirect:/carrera/listado";
 	}

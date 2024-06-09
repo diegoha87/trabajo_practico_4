@@ -1,6 +1,6 @@
 package ar.edu.unju.fi.collections;
 
-import java.lang.reflect.GenericArrayType;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -11,7 +11,6 @@ import java.util.function.Predicate;
 import org.springframework.stereotype.Component;
 
 import ar.edu.unju.fi.model.Alumno;
-import ar.edu.unju.fi.model.Carrera;
 
 
 @Component
@@ -25,7 +24,7 @@ public class CollectionAlumno {
 		 if(alumnos.isEmpty()) {
 			 alumnos.add(new Alumno(33560457,"Diego","Aguirre","diegoha14@gmail.com","3885962601",LocalDate.of(1987, 10, 07),"Pje Tumbaya 1326","5343"));
 			 alumnos.add(new Alumno(41763889, "Juan", "Perez", "juanperez24@gmail.com", "3886139935", LocalDate.of(1996, 02, 28), "Av. Americas", "4376"));
-			 alumnos.add(new Alumno(41763889, "Carlos", "Sanchez", "carloss16@gmail.com", "3885198825", LocalDate.of(1981, 05, 10), "Los Tulipanes", "5134"));
+			 alumnos.add(new Alumno(41457789, "Carlos", "Sanchez", "carloss16@gmail.com", "3885198825", LocalDate.of(1981, 05, 10), "Los Tulipanes", "5134"));
 				 
 		 }
 		 return alumnos;
